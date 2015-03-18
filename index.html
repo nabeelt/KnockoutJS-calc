@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Knock calc</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	</head>
+	<body>
+		<div class="calculator">
+			<div class="calc-container">
+				<div class="result">
+					<input data-bind="value:result" class="result-field" readonly="readonly">
+				</div>
+				<div class="numbers" data-bind="foreach:numbers">
+					<button data-bind="value:val, text:val ,click: $parent.addNumber"></button>
+				</div>
+				<div class="methods" data-bind="foreach:commands">
+					<button data-bind="value:command,text:command,click:$parent.addCommand"></button>
+				</div>
+				<button data-bind="click : calculate" class="calculateButton">=</button>
+				<button data-bind="click : clearResult" class="calculateButton">clear</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="assets/js/knockout-3.3.0.js"></script>
+		<script type="text/javascript" src="assets/js/knockout.mapping.js"></script>
+		<script type="text/javascript" src="assets/js/main.js"></script>
+	</body>
+</html>

@@ -14,10 +14,18 @@
 					<button data-bind="value:val, text:val ,click: $parent.displayNumber"></button>
 				</div>
 				<div class="methods" data-bind="foreach:operators">
-					<button data-bind="value:operator,text:operator,click:$parent.displayOperator"></button>
+					<button data-bind="value:operator,text:operator,click:$parent.displayOperator">
+					</button>
+				</div>
+				<div class="trignometry">
+					<button data-bind="click : sin">sin</button>
+					<button data-bind="click : cos">cos</button>
+					<button data-bind="click : tan" style="margin-right:0px;">tan</button>
+
 				</div>
 				<button data-bind="click : calculate" class="calculateButton">=</button>
-				<button data-bind="click : clearResult" class="calculateButton">clear</button>
+				<button data-bind="click : clearLast" class="calculateButton">c</button>
+				<button data-bind="click : clearResult" class="calculateButton">Clear all</button>
 			</div>
 		</div>
 		<script type="text/javascript" src="assets/js/knockout-3.3.0.js"></script>

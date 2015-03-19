@@ -42,7 +42,7 @@ input.result-field {
 	margin-top: 25px;
 }
 button {
-	width: 75px;
+	width: 24%;
 	height: 44px;
 	border: 2px solid black;
 	/* padding: 10px; */
@@ -62,12 +62,20 @@ button:hover{
 	padding:10px;
 	border: 1px solid white;
 }
+.trignometry{
+	border: 1px solid white;
+	padding:10px;
+	margin-top: 10px;
+}
+.trignometry button{
+	margin-right: 39px;
+}
 button.calculateButton {
-	width: 50%;
+	width: 33%;
 	float: left;
 	margin-top: 38px;
 	color: wheat;
-	background: rgb(40, 133, 130);
+	background: linear-gradient(to bottom,rgb(43, 202, 196),rgb(37, 38, 39));
 	border: 2px solid wheat;
 }
 .calculateButton:hover{

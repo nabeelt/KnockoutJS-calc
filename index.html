@@ -11,10 +11,10 @@
 					<input data-bind="value:result" class="result-field" readonly="readonly">
 				</div>
 				<div class="numbers" data-bind="foreach:numbers">
-					<button data-bind="value:val, text:val ,click: $parent.addNumber"></button>
+					<button data-bind="value:val, text:val ,click: $parent.displayNumber"></button>
 				</div>
-				<div class="methods" data-bind="foreach:commands">
-					<button data-bind="value:command,text:command,click:$parent.addCommand"></button>
+				<div class="methods" data-bind="foreach:operators">
+					<button data-bind="value:operator,text:operator,click:$parent.displayOperator"></button>
 				</div>
 				<button data-bind="click : calculate" class="calculateButton">=</button>
 				<button data-bind="click : clearResult" class="calculateButton">clear</button>

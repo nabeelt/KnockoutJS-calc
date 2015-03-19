@@ -1,11 +1,11 @@
 var calculatorModel = function calculator(){
-	var self=this;
+	var index=this;
 
 	// array of commands
-	self.commands=[{command: ' + '},{command: ' - '},{command: ' * '},{command: ' / '}];
+	index.operators=[{operator: ' + '},{operator: ' - '},{operator: ' * '},{operator: ' / '}];
 
 	//array of numbers
-	self.numbers=[
+	index.numbers=[
 			{val:'1'},
 			{val:'2'},
 			{val:'3'},
@@ -19,26 +19,26 @@ var calculatorModel = function calculator(){
 	];
 
 	//result view
-	self.result = ko.observable('');
+	index.result = ko.observable('');
 	
 	//Show number on screen
-	self.addNumber = function(){
-		self.result(self.result()+this.val);
+	index.displayNumber = function(){
+		index.result(index.result()+this.val);
 	}
 
 	//Adding commands
-	self.addCommand = function(){
-		self.result(self.result()+this.command);
+	index.displayOperator = function(){
+		index.result(index.result()+this.operator);
 	}
 
 	//calculation
-	self.calculate = function(){
-		self.result(eval(self.result()));
+	index.calculate = function(){
+		index.result(eval(index.result()));
 	}
 
 	//clear Result
-	self.clearResult = function(){
-		self.result('');
+	index.clearResult = function(){
+		index.result('');
 	}
 };
 ko.applyBindings(new calculatorModel());
